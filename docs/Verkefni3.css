@@ -1,0 +1,354 @@
+body{
+  font-family: "trebuchet ms";
+}
+
+
+
+, *:before, *:after {
+    box-sizing: border-box; 
+}
+
+/*heimild: https://gridbyexample.com/examples/example13/ */
+
+/* ====== GRID Area ====== */
+.topnav{
+  grid-area:topnav;
+}
+
+header {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+
+.midja{
+  grid-area: midja;
+}
+
+.vinstri {
+  grid-area: vinstri;
+}
+
+.haegri{
+  grid-area: haegri;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* ====== GRID Template Areas ===== */
+body {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+    "topnav"
+
+}
+.content{
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas:
+  "midja"
+  "haegri" 
+  "vinstri"
+
+}
+/* ====== Base litir + padding ====== */
+
+body {
+  line-height: 1.5em;
+  background-color: silver;
+}
+.topnav {
+  background-color: tomato ; 
+}
+header {
+  background-color: blue; 
+}
+footer {
+  background-color: blue ; 
+}
+.midja {
+  background-color: white; 
+}
+.vinstri{
+  background-color: tomato;  
+} 
+.haegri {
+  background-color: tomato; 
+}
+
+header,
+footer,
+.midja,
+.vinstri, 
+.haegri {
+  padding: 1em; 
+}
+
+/* ====== leturstílar ====== */
+
+header h1 {
+  color: #fff;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.midja h2 {
+  margin: .7em 0 .8em 0;
+}
+.midja h4 {
+  text-align: justify;
+  margin: .4em 0;
+}
+.midja p {
+  text-align: justify;
+}
+
+/* ========================================
+  Efnisyfirlit
+  ======================================== */
+
+.topmenu {
+  padding: 0;
+  margin: 0;
+  list-style: none; 
+}
+.topmenu li {
+  border: 0;
+  border-bottom: 1px solid lime; 
+  background-color: tomato;
+  padding: 0;
+}
+
+.topmenu a {
+  display: block;     /* ath! */
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: .4em 2em; 
+
+}
+
+
+/* =======================================
+   Myndvinnsla  
+  ======================================== */
+
+
+
+
+/*  myndir <img> alltaf í 100% stærð munið að vinna og 
+    þjappa myndir í photoshop ! */
+img,video {
+  max-width: 100%;
+  height: auto;
+}
+
+img{
+  display: block;
+}
+figure{
+  margin: 0;
+  border: 1px blue;
+}
+.myndabox{
+  width: 162px;
+
+}
+/*  ========================================
+  Viðmið - breakpoints 30em = 480px + 
+  ========================================*/
+
+@media screen and (min-width: 30em) {  /* það má ekki setja slaufusvigann í næstu línu, þá virkar ekki viðmiðið */
+  .myndabox{
+    display: grid;
+    grid-template-columns: 162px 162px;
+
+  }
+  
+}
+
+/*  ========================================
+  Viðmið - breakpoints 37.5em = 600px + 
+  ========================================*/
+  @media screen and (min-width: 37.5em){
+
+    .content{
+      display: grid;
+      grid-gap: 0;
+      grid-template-areas: 
+      "haegri midja"
+      "vinstri midja";
+      grid-template-columns:1fr 2fr;
+
+    }
+
+  }
+
+/* ========================================
+  Viðmið - breakpoints 48em = 760px +
+  ======================================== */
+@media screen and (min-width: 48em){
+  body{
+    grid-template-areas: 
+    "topnav"
+    "header"
+    "content"
+    "footer"
+
+  }
+  .topmenu{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+  }
+  .topmenu li{
+    border: 1px solid lime;
+    border-width: 0 1px;
+
+  }
+  .topmenu li:last-child{
+    border-right: 1px blue;
+  }
+}
+
+
+/* ========================================
+  Viðmið - breakpoints 60em = 960px +
+  ======================================== */
+@media screen and (min-width: 60em) {
+body{
+  max-width: 60em;
+  margin: 0 auto;
+  }
+  .content {
+    grid-template-areas: 
+    "vinstri midja haegri";
+
+    grid-template-columns: 1fr 3fr 1fr;
+
+  }
+  .myndabox{
+    grid-template-columns: repeat(4, 83,4%)
+  }
+}
+
+/* ========================================
+  Viðmið - breakpoints 80em = 1600px +
+  ======================================== */
+
+@media screen and (min-width: 80em) {
+
+  .myndabox{
+    grid-template-columns: repeat(4,100%);
+  }
+}
+  
+
+
+
+
+
+
+
+
+  a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: tomato; /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: tomato;
+    align-items: center;
+    content: center;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 70%;
+}
+
+/* The Close Button */
+.close {
+    color: green;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Auglýsing*/
+.canvas{
+  background-color: white;
+  grid-template-columns: 1fr;
+  background: linear-gradient(0deg,white,tomato );
+  animation: kassi 9s ease infinite;
+
+}
+  
+.augl p{
+  padding: 3em;
+}
+.augl{
+  grid-template-columns: 1fr;
+  border: solid black;
+  position: relative;
+  overflow: hidden;
+  animation: bord 3s infinite;
+  animation-direction: alternate;
+  height: 560px;
+}
+.texti{
+  animation: augltext 4s infinite;
+}
+
+@keyframes bord{
+  0%  {border-color: tomato;}
+  25% {border-color: white;}
+  50% {border-color: tomato;}
+  75% {border-color: white;}
+  100%{border-color: tomato;}
+}
+
+@keyframes kassi {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+@keyframes augltext {
+  0%{transform: scale(1);}
+  25%{transform: scale(0);}
+  100%{transform: scale(1);}
+}
+
+

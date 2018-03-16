@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- þvingar farsíma vafra til að birta gögn 1:1 og þá virka viðmið (breakpoints) í stílsíðum -->
+	<meta charset="utf-8">
+	<title>Verkefni 3 test</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="Verkefni3.css">
+</head> 
+<body> 
+	  <nav class="topnav">
+        <ul class="topmenu">
+        	<li><a href="index.html">Sveigjanleg vefhönnun (RWD)</a></li>
+        	<li><a href="myndir.html">Myndnotkun eftir sjástærð</a></li>
+        </ul>
+    </nav>
+    
+	
+	<header>
+		<img src="http://tsuts.tskoli.is/2t/2408012210/Sman.jpg">
+		<h1>Kvikun -<i> Animation.</h1>
+	</header>
+	
+	<section class="content"> 
+		<article class="midja">
+			<h2>Aðaldálkur</h2>
+			<h4>Í verkefni 1 hafa nemendur kost á því að leysa þetta verkefni með nýja CSS grindakerfinu sem þróað hefur verið undanfarin ár og nú eru framleiðendur helstu vafra internetsins búnir að innleiða þessa lausn í nýjustu vafrana sjá: <a href="https://caniuse.com/"> Can I use </a> nema ennþá þarf forskeyti (<em>e. prefix</em>) á IE og Edge vafrana.
+			</h4>
+			
+
+			<p><a href="https://gridbyexample.com/">Grid by Example</a></p>
+			<p><a href="https://tympanus.net/codrops/css_reference/grid/">CSS grid</a></p>		
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod sodales lacus eu tempor. Maecenas eget felis vitae massa pharetra mattis non pellentesque dolor. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl.
+			</p>
+		<!-- Trigger/Open The Modal -->
+<button id="myBtn">Opna Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Þetta er modal</p>
+  </div>
+
+</div>
+
+<script>
+		// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+	    		modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+	    		modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+	    		if (event.target == modal) {
+	        		modal.style.display = "none";
+   		}
+}
+</script>
+
+
+		</article>
+		
+
+
+		<aside class="canvas">
+				<div class="augl">
+						<div class="texti">
+							<p>Fljúgðu beint til tvíburaturnanna - með Icelandair</p>	
+								<img src="https://web.ccpgamescdn.com/newssystem/media/71830/1/Icelandair.png">
+						</div>
+					</div>
+			
+				</div>
+		</aside>
+		
+		<aside class="haegri">
+			
+			<img src="http://www.chinadaily.com.cn/bizchina/images/attachement/jpg/site1/20120322/0013729e477110d4b5cc4d.jpg">
+		</aside>
+	</section>
+	<footer>
+		<h3>Fótur</h3>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets </a>  (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+	</footer>
+
+
+</body>
+</html>
