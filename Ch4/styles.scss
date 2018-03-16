@@ -1,0 +1,210 @@
+$text-color:#333;
+$b-c-g:grey;
+$b-c-r:#E80C39;/*red*/
+$base-spacing:1em;
+$zero:0;
+$tc:center;/*text center*/
+$wi:100%;/*width 100%*/
+
+$font-family1: 'Roboto', sans-serif;
+$font-family2: 'Mina', sans-serif;
+
+
+
+main{
+min-height: 1000px;
+height: auto !important;
+height: 600px;
+
+}
+
+
+@mixin header{
+color:rgba(12, 232, 164, 1);
+text-align:$tc;
+margin:50px;
+font-size:85px;
+
+
+}
+
+
+
+@mixin para{
+font-family:$font-family2;
+text-align:$tc;
+margin:25px;
+}
+
+
+
+@mixin Middle{
+max-width:70em;
+margin:auto;
+
+
+
+}
+
+@mixin Middle2{
+max-width:50em;
+margin:auto;
+}
+
+
+body{
+background-color:$b-c-r;
+}
+
+*{
+margin:$zero;
+padding:$zero;
+}
+
+h1{
+color: $text-color;
+}
+
+header{
+@include header;
+font-family:$font-family1;
+}
+
+p{
+@include para;
+
+}
+
+
+main{
+background-color:$b-c-g;
+@include Middle;
+font-family:$font-family2;
+div{
+@include Middle2;
+text-align:$tc;
+}
+
+
+
+}
+
+
+
+
+
+
+@mixin small() {
+  @media only screen and (max-width: 320px) {
+  @content;
+}
+}
+
+
+$text-color:#333;
+$b-c-g:grey;
+$b-c-r:#E80C39;/*red*/
+$base-spacing:1em;
+$zero:0;
+$tc:center;/*text center*/
+$wi:100%;/*width 100%*/
+
+$font-family1: 'Roboto', sans-serif;
+$font-family2: 'Mina', sans-serif;
+
+
+
+main{
+ min-height: 1000px;
+    height: auto !important;
+    height: 600px;
+
+}
+
+
+@mixin header{
+ color:rgba(12, 232, 164, 1);
+ text-align:$tc;
+ margin:50px;
+ font-size:85px;
+
+
+}
+
+
+
+@mixin para{
+ font-family:$font-family2;
+ text-align:$tc;
+ margin:25px;
+}
+
+
+
+@mixin Middle{
+ max-width:70em;
+ margin:auto;
+
+
+
+}
+
+@mixin Middle2{
+ max-width:50em;
+ margin:auto;
+}
+
+
+body{
+ background-color:$b-c-r;
+}
+
+*{
+ margin:$zero;
+ padding:$zero;
+}
+
+h1{
+ color: $text-color;
+}
+
+header{
+ @include header;
+ font-family:$font-family1;
+}
+
+p{
+ @include para;
+
+}
+
+
+main{
+ background-color:$b-c-g;
+ @include Middle;
+ font-family:$font-family2;
+ div{
+ @include Middle2;
+ text-align:$tc;
+}
+
+
+
+}
+
+
+
+
+
+
+@mixin small() {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+footer{
+ text-align:$tc;
+}
+
+
